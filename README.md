@@ -16,4 +16,5 @@ Project Setup
             ® python manage.py migrate
     - python manage.py createsuperuser
             
-				
+    - run django server
+        - python manage.py runserver
