@@ -11,8 +11,10 @@
             "program": "${workspaceFolder}\\onlinestore\\manage.py",
             "args": [
                 "runserver",
-                "--noreload",
-                // "nothreading"
+                // "--noreload", // Use the --noreload option to disable the use of the auto-reloader. 
+                // "nothreading" // Disables use of threading in the development server. The server is multithreaded by default.
+
+
             ],
             "django": true
         }
