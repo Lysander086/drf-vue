@@ -1,11 +1,12 @@
 from rest_framework import serializers
-from .models import Ebook,Review
+from .models import Ebook, Review
+
 
 class ReviewSerializer(serializers.ModelSerializer):
-
     class Meta:
         model = Review
-        fields = "__all__"
+        exclude = ("ebook",)
+        # fields = "__all__"
 
 
 # equals to java dto
