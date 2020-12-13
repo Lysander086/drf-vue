@@ -6,27 +6,20 @@ from rest_framework.generics import get_object_or_404
 
 from .models import Ebook, Review
 from .serilizers import EbookSerializer, ReviewSerializer
+from rest_framework import permissions
+from .permissions import IsAdminUserOrReadOnly
 
 
-# class EbookListCreateAPIView(generics.CreateAPIView):
-#     queryset = Ebook.objects.all()
-#     serializer_class = EbookSerializer
+class EbookListCreateAPIView(generics.ListCreateAPIView):
+    queryset = Ebook.objects.all().order_by("id")
+    serializer_class = EbookSerializer
+    permission_classes = [IsAdminUserOrReadOnly]
 
 
 class EbookDetailsAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Ebook.objects.all()
     serializer_class = EbookSerializer
-
-
-class EbookListCreateAPIView(mixins.ListModelMixin, mixins.CreateModelMixin, generics.GenericAPIView):
-    queryset = Ebook.objects.all()
-    serializer_class = EbookSerializer
-
-    def get(self, req, *args, **kwargs):
-        return self.list(req, *args, **kwargs)
-
-    def post(self, req, *args, **kwargs):
-        return self.create(req, *args, **kwargs)
+    permission_classes = [IsAdminUserOrReadOnly]
 
 
 class ReviewCreateAPIView(generics.CreateAPIView):
@@ -39,9 +32,7 @@ class ReviewCreateAPIView(generics.CreateAPIView):
         serializer.save(ebook=ebook)
 
 
-
 class ReviewDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Review.objects.all()
     serializer_class = ReviewSerializer
     # permission_classes = [IsReviewAuthorOrReadOnly]
-

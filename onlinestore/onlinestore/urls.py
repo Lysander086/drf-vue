@@ -22,7 +22,8 @@ from django.urls import include, path
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("api/", include("products.urls")),
-    path("api/", include("ebooks.urls"))
+    path("api/", include("ebooks.urls")),
+    path("api-auth/", include("rest_framework.urls"))  # add login and logout option at top right corner
 ]
 
 if settings.DEBUG:
