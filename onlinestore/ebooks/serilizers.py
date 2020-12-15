@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Ebook, Review
+from .models import Ebook, Review, Quote
 
 
 class ReviewSerializer(serializers.ModelSerializer):
@@ -16,4 +16,12 @@ class EbookSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Ebook
+        fields = "__all__"
+
+class QuoteSerializer(serializers.ModelSerializer):
+
+    quote_author = serializers.StringRelatedField(read_only=True)
+
+    class Meta:
+        model = Quote
         fields = "__all__"

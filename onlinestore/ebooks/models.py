@@ -27,3 +27,15 @@ class Review(models.Model):
 
     def __str__(self):
         return self.rating
+
+
+class Quote(models.Model):
+    quote_author = models.CharField(max_length=60)
+    quote_body =  models.CharField(max_length=500)
+    source =  models.CharField(max_length=500)
+    context = models.TextField()
+    created_at = models.DateField()
+
+    def __str__(self):
+        return self.quote_body
+
