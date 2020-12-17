@@ -23,6 +23,13 @@ Project Setup
         - python manage.py runserver
 
 
+
+Errors that may come across
+---
+- 针对django2.2报错：UnicodeDecodeError: 'gbk' codec can't decode byte 0xa6 in position 9737: 
+    
+    - solution: [link](https://www.cnblogs.com/loveprogramme/p/10726712.html) 
+
 Users and account
 ---
-- standard/Ebook.objects.all
+- username/pwd: standard/Ebook.objects.all

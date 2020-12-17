@@ -12,7 +12,7 @@ class Profile(models.Model):
     avatar = models.ImageField(null=True, blank=True)
 
     def __str__(self):
-        return self.user.name
+        return self.user.username
 
 
 class ProfileStatus(models.Model):
