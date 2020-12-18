@@ -33,3 +33,4 @@ Errors that may come across
 Users and account
 ---
 - username/pwd: standard/Ebook.objects.all
+- random/auth/user/add/
