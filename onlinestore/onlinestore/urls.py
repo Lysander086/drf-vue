@@ -19,11 +19,13 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("api/", include("products.urls")),
     path("api/", include("ebooks.urls")),
-    path("api-auth/", include("rest_framework.urls"))  # add login and logout option at top right corner
+    path("api-auth/", include("rest_framework.urls")),  # add login and logout option at top right corner
+    path('api/rest-auth' , include('rest_auth.urls'))
 ]
 
 if settings.DEBUG:
