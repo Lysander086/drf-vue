@@ -23,9 +23,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("api/", include("products.urls")),
     path("api/", include("ebooks.urls")),
+    path("api/", include("profiles.urls")),
     # add login and logout option at top right corner, login via browsable api
     path("api-auth/", include("rest_framework.urls")),
-    path('api/rest-auth/', include('rest_auth.urls'))
+    path('api/rest-auth/', include('rest_auth.urls')),
 ]
 
 if settings.DEBUG:
