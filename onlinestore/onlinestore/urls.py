@@ -27,6 +27,7 @@ urlpatterns = [
     # add login and logout option at top right corner, login via browsable api
     path("api-auth/", include("rest_framework.urls")),
     path('api/rest-auth/', include('rest_auth.urls')),
+    path('api/rest-auth/registration/', include('rest_auth.registration.urls')),
 ]
 
 if settings.DEBUG:
