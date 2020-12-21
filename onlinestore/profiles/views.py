@@ -4,6 +4,7 @@ from rest_framework import mixins
 from rest_framework import viewsets
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.viewsets import ModelViewSet
+from rest_framework.filters import SearchFilter
 
 from .models import Profile, ProfileStatus
 from .permissions import IsOwnProfileOrReadOnly, IsOwnerOrReadOnly
@@ -24,7 +25,8 @@ class ProfileViewSet(mixins.UpdateModelMixin, mixins.ListModelMixin, mixins.Retr
     queryset = Profile.objects.all()
     serializer_class = ProfileSerializer
     permission_classes = [IsAuthenticated, IsOwnProfileOrReadOnly]
-
+    filter_backends = [SearchFilter]
+    search_fields = ['city']
 
 class ProfileStatusViewSet(ModelViewSet):
     queryset = ProfileStatus.objects.all()
