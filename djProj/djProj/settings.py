@@ -43,10 +43,11 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'rest_auth',
     'rest_auth.registration',
-    'products',
-    'news',
-    'ebooks',
-    'profiles',
+    # 'products',
+    # 'news',
+    # 'ebooks',
+    # 'profiles',
+    'users'
 ]
 
 MIDDLEWARE = [
