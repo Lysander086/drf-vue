@@ -37,7 +37,9 @@ class ProfileStatusViewSet(ModelViewSet):
         queryset = ProfileStatus.objects.all()
         username = self.request.query_params.get("username", None)
         if username is not None:
-            queryset = queryset.filter(user_profile_user__username=username)
+            queryset = queryset.filter(user_profile__user__username=username)
+        return queryset
+
 
     def perform_create(self, serializer):
         user_profile = self.request.user.profile
