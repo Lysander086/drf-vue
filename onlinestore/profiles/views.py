@@ -29,7 +29,7 @@ class ProfileViewSet(mixins.UpdateModelMixin, mixins.ListModelMixin, mixins.Retr
     search_fields = ['city']
 
 class ProfileStatusViewSet(ModelViewSet):
-    queryset = ProfileStatus.objects.all()
+    # queryset = ProfileStatus.objects.all()
     serializer_class = ProfileStatusSerializer
     permission_classes = [IsAuthenticated, IsOwnerOrReadOnly]
 
