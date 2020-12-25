@@ -1,5 +1,5 @@
 clients/clients/config.py
-
+.vscode/
 
 # python.gitignore + frontend.gitignore
 # Byte-compiled / optimized / DLL files
