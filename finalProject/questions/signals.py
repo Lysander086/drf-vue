@@ -1,11 +1,9 @@
 from django.db.models.signals import pre_save
-
 from django.dispatch import receiver
 from django.utils.text import slugify
 
-from .models import Question, Answer
-from .utils import generate_random_string
 from .models import Question
+from .utils import generate_random_string
 
 
 @receiver(pre_save, sender=Question)
