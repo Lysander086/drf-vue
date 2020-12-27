@@ -37,9 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
 
-    'users',
-    'questions',
-
     'rest_framework',
     'rest_framework.authtoken',
 
@@ -51,6 +48,10 @@ INSTALLED_APPS = [
     'rest_auth.registration',
 
     'crispy_forms',
+    # 'webpack_loader',
+
+    'users',
+    'questions'
 ]
 
 MIDDLEWARE = [
