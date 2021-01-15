@@ -1,41 +1,27 @@
-{% extends "base.html" %}
-{% block style %}
-<style>
-    html, body {
-        height: 100%;
-        font-family: "Playfair Display", serif;
-    }
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Question Time</title>
 
-    .auth-box {
-        border: 3px solid lightgrey;
-        border-radius: 10px;
-        padding-top: 25px;
-        padding-bottom: 25px;
-        width: 600px;
-        margin: auto;
-    }
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
 
-    .login-form-container {
-        width: 300px;
-        margin: auto;
-    }
+  <style>
+  .login-form-container{
+    width: 300px;
+    margin: auto;
 
-    .registration-form-container {
-        width: 400px;
-        margin: auto;
-    }
-
-    .outer-area {
-        margin-top: 100px;
-    }
-</style>
-{% endblock %}
-
-{% block content %}
-<div class="outer-area">
-    <div class="auth-box text-center">
-        {% block auth %}
-        {% endblock %}
-    </div>
+  }
+  </style>
+</head>
+<body>
+<div class="auth-box text-cente r">
+  {% block content %}
+  {% endblock %}
 </div>
-{% endblock %}
+</body>
+</html>
