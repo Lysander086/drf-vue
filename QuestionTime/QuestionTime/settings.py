@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     'rest_auth.registration',
 
     'crispy_forms',
-    'webpack_loader',
+    # 'webpack_loader',
 
     'users',
     'questions'

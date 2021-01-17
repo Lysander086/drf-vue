@@ -1,7 +1,6 @@
-clients/clients/config.py
+# python.gitignore + frontend.gitignore
 .vscode/
 
-# python.gitignore + frontend.gitignore
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -117,4 +116,3 @@ ENV/
 **/node_modules/*
 .idea/
 
-**/migrations/*
